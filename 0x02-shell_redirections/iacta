@@ -1,13 +1,17 @@
 total 44
--rwxr--r-- 1 root root   44 Feb  1 17:07 0-hello_world
--rwxr--r-- 1 root root   27 Feb  1 19:32 1-confused_smiley
--rwxr--r-- 1 root root   28 Feb  1 19:43 2-hellofile
--rwxr--r-- 1 root root   39 Feb  1 19:46 3-twofiles
--rwxr--r-- 1 root root   29 Feb  1 19:47 4-lastlines
--rwxr--r-- 1 root root   29 Feb  1 19:49 5-firstlines
--rwxr--r-- 1 root root   36 Feb  1 20:23 6-third_line
--rwxr--r-- 1 root root   96 Feb  1 22:11 7-file
--rw-r--r-- 1 root root 1724 Feb  1 22:19 prueba
--rw-r--r-- 1 root root    0 Feb  1 22:25 prueba2
--rw-r--r-- 1 root root  101 Feb  1 20:04 read
--rw-r--r-- 1 root root   17 Feb  1 16:13 README.md
+1-rwxr--r-- 1 root root   44 Feb  1 17:07 0-hello_world
+2-rwxr--r-- 1 root root   27 Feb  1 19:32 1-confused_smiley
+3-rwxr--r-- 1 root root   28 Feb  1 19:43 2-hellofile
+4-rwxr--r-- 1 root root   39 Feb  1 19:46 3-twofiles
+5-rwxr--r-- 1 root root   29 Feb  1 19:47 4-lastlines
+6-rwxr--r-- 1 root root   29 Feb  1 19:49 5-firstlines
+7-rwxr--r-- 1 root root   36 Feb  1 20:23 6-third_line
+8-rwxr--r-- 1 root root   96 Feb  1 22:11 7-file
+9-rw-r--r-- 1 root root 1724 Feb  1 22:19 prueba
+10-rw-r--r-- 1 root root    0 Feb  1 22:25 prueba2
+11-rw-r--r-- 1 root root  101 Feb  1 20:04 read
+12-rw-r--r-- 1 root root   17 Feb  1 16:13 README.md
+13 prueba
+14 prueba
+15 prueb
+16 prueba
