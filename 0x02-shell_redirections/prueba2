@@ -1,0 +1,13 @@
+total 44
+-rwxr--r-- 1 root root   44 Feb  1 17:07 0-hello_world
+-rwxr--r-- 1 root root   27 Feb  1 19:32 1-confused_smiley
+-rwxr--r-- 1 root root   28 Feb  1 19:43 2-hellofile
+-rwxr--r-- 1 root root   39 Feb  1 19:46 3-twofiles
+-rwxr--r-- 1 root root   29 Feb  1 19:47 4-lastlines
+-rwxr--r-- 1 root root   29 Feb  1 19:49 5-firstlines
+-rwxr--r-- 1 root root   36 Feb  1 20:23 6-third_line
+-rwxr--r-- 1 root root   96 Feb  1 22:11 7-file
+-rw-r--r-- 1 root root 1724 Feb  1 22:19 prueba
+-rw-r--r-- 1 root root    0 Feb  1 22:25 prueba2
+-rw-r--r-- 1 root root  101 Feb  1 20:04 read
+-rw-r--r-- 1 root root   17 Feb  1 16:13 README.md
