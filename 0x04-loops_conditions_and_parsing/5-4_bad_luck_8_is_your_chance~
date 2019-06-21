@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Display bad luck in the 4 iteration and good luck in the 8 iteration
+
+num=1
+
+while((num <= 10))
+do
+	if ((num==4)); then
+	   echo bad luck
+	elif((num==8)); then
+	   echo good luck
+	else
+	   echo Holberton School
+	fi
+	((num ++))
+done
