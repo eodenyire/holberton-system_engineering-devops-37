@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Bash script that displays numbers from 1 to 20 and:
 
-cont=0
+cont=1
 
-while((cont<20)); do
+while((cont<=20)); do
     echo "$cont"
 	case "$cont" in
 	4) echo "bad luck from China";;
