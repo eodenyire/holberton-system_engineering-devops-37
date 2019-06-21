@@ -5,7 +5,7 @@ hours=0
 
 while((hours<=12)); do
     echo "Hour: $hours"
-    min=0
+    min=1
     while((min<=59)); do
         echo $min
 	((min ++))
