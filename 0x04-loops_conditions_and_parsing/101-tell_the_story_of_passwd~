@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+# cript that displays the content of the file /etc/passwd, using the while loop + IFS
