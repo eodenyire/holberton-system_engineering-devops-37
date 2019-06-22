@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-# script that displays numbers from 1 to 100.
-
-num = 1
-
-while((num<=100)); do
