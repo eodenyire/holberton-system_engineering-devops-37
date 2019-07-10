@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# echo text sent to a listening socket
+
+nc -k -l 98
