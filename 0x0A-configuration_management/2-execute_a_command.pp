@@ -1,5 +1,5 @@
 # creates a manifest that kill killmenow
-exec { 'killmenow' :
-  command  => 'pkill -f ./killmenow',
-  provider => 'shell',
+exec { 'pkill':
+  command => 'pkill killmenow',
+  path    => '/usr/bin',
 }
