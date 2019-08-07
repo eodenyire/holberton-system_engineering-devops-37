@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#Install nginx web server
+
+URL=/etc/nginx/sites-available/default
+TEXT="location /redirect_me {\n return 301 https://www.google.com;\n}\n"
+T404="error_page 404 /404.html;\n location = /404.html {\n root /var/www/html;\n internal;\n}\n"
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404.html
+sudo sed -i "26i $TEXT" $URL
+sudo sed -i "30i $T404" $URL
+sudo service nginx stop
+sudo service nginx start
