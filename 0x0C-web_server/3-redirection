@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #Install nginx web server
 
-URL = /etc/nginx/sites-available/default
-TEXT = "location /redirect_me {\n return 301 https://www.google.com;\n}\n"
+URL=/etc/nginx/sites-available/default
+TEXT="location /redirect_me {\n return 301 https://www.google.com;\n}\n"
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
