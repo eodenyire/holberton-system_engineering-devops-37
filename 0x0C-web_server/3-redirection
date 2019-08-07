@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 #Install nginx web server
 
+URL = /etc/nginx/sites-available/default
+TEXT = "location /redirect_me {\n return 301 https://www.google.com;\n}\n"
+
 sudo apt-get -y update
 sudo apt-get -y install nginx
 echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
-return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4
+sudo sed -i "37i $TEXT" $URL
 sudo service nginx start
