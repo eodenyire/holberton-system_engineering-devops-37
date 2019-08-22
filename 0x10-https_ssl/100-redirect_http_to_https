@@ -40,31 +40,29 @@ defaults
 	errorfile 504 /etc/haproxy/errors/504.http
 
 # frontend http_front
-#          bind *:80
-#          mode http
-#          default_backend http_back
+#       bind *:80
+#       mode http
+#       default_backend http_back
 
 #backend http_back
-#        balance roundrobin
-#        server 316-web-01 35.237.122.227:80 check
-#        server 316-web-02 35.237.198.85:80 check
+#       balance roundrobin
+#       server 316-web-01 35.237.122.227:80 check
+#      	server 316-web-02 35.237.198.85:80 check
 
 frontend www-http
-   	  bind *:80
-   	   reqadd X-Forwarded-Proto:\ http
-   	    default_backend www-backend
+   	bind *:80
+    	reqadd X-Forwarded-Proto:\ http
+	redirect scheme https code 301 if !{ ssl_fc }
+	default_backend and_dev
 
 frontend www-https
-   	  bind *:443 ssl crt /etc/haproxy/certs/www.instakush.website.pem
-   	   reqadd X-Forwarded-Proto:\ https
-   	    acl letsencrypt-acl path_beg /.well-known/acme-challenge/
-   	     use_backend letsencrypt-backend if letsencrypt-acl
-   	      default_backend www-backend
+   	bind *:443 ssl crt /etc/haproxy/ssl/www.virtualinnova.tech
+    	reqadd X-Forwarded-Proto:\ https
+    	default_backend and_dev
 
-backend www-backend
-   	redirect scheme https if !{ ssl_fc }
-      	server 316-web-01 35.237.122.227:80 check
-        server 316-web-02 35.237.198.85:80 check
-
-backend letsencrypt-backend
-   	server letsencrypt 127.0.0.1:54321
+backend and_dev
+    balance roundrobin
+    option forwardfor
+    redirect scheme https if !{ ssl_fc }
+    server 778-web-01  35.237.122.227:80 check
+    server 778-web-02  35.237.198.85:80 check
