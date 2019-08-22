@@ -7,7 +7,7 @@ T404="error_page 404 /404.html;\n location = /404.html {\n root /var/www/html;\n
 sudo apt-get -y update
 sudo apt-get -y install nginx
 echo "Holberton School" | sudo tee /var/www/html/index.html
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
 sudo sed -i "26i $TEXT" $URL
 sudo sed -i "30i $T404" $URL
 sudo service nginx stop
