@@ -39,16 +39,6 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-# frontend http_front
-#       bind *:80
-#       mode http
-#       default_backend http_back
-
-#backend http_back
-#       balance roundrobin
-#       server 316-web-01 35.237.122.227:80 check
-#      	server 316-web-02 35.237.198.85:80 check
-
 frontend www-http
    	bind *:80
     	reqadd X-Forwarded-Proto:\ http
@@ -64,5 +54,5 @@ backend and_dev
     balance roundrobin
     option forwardfor
     redirect scheme https if !{ ssl_fc }
-    server 778-web-01  35.237.122.227:80 check
-    server 778-web-02  35.237.198.85:80 check
+    server 750-web-01 35.237.122.227:80 check
+    server 750-web-02 35.237.198.85:80 check
