@@ -1,13 +1,13 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 """
-Write a recursive function.
+Write a recursive function
 """
 import requests
 
-
 def recurse(subreddit, hot_list=[], after=None):
-""" Funtion that return list whit titles """
-
+    """
+    Funtion that return list whit titles
+    """
     try:
         j_list = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
         user = {'User-Agent': 'Trollolol'}
