@@ -8,9 +8,9 @@ import requests
 def recurse(subreddit, hot_list=[], after=None):
 
     try:
-        json_list = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
+        j_list = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
         user = {'User-Agent': 'Trollolol'}
-        my_list = requests.get(json_list, headers=user, params={'after': after})
+        my_list = requests.get(j_list, headers=user, params={'after': after})
         r_sub = my_list.json().get('data').get('children')
         s_sub = my_list.json()['data'].get('after')
         for data in r_sub:
