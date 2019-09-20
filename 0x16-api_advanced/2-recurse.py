@@ -6,6 +6,7 @@ import requests
 
 
 def recurse(subreddit, hot_list=[], after=None):
+""" Funtion that return list whit titles """
 
     try:
         j_list = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
