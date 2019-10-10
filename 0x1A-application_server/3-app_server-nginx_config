@@ -48,6 +48,11 @@ server {
         location /airbnb-onepage/ {
                  proxy_pass http://127.0.0.1:5000;
         }
+
+	location /airbnb-dynamic/number_odd_or_even/ {
+                    rewrite /airbnb-dynamic/(.*) /$1 break;
+                    proxy_pass http://127.0.0.1:5001/number_odd_or_even;
+        }
         # Add index.php to the list if you are using PHP
         index index.html index.htm index.nginx-debian.html;
 
